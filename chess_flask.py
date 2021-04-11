@@ -1,4 +1,3 @@
-
 # Import neccesary packages
 import pandas as pd
 import numpy as np
