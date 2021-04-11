@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Chess Brain</title>
+    
+    
+  </head>
+  <body>
+    <div class="contact-us">
+        <form action="{{ url_for('predict')}}"method="post">
+            <input class="center" type="checkbox" id="check" name="check" />
+                <label for="check">
+                    <span></span>
+                    Rated?
+                </label>
+            <div></div>
+            <input name="Black Rating" placeholder="Black's Rating" required="required" type="text" />
+            <input name="White Rating" placeholder="White's Rating" required="required" type="text" />
+            <input name="Opening Move" placeholder="Opening Move" type="text" />
+            <button type="submit">Determine Winner</button>
+        </form>
+        <div></div>
+        {{ prediction_text }}
+
+      </div>
+  </body>
+</html>
