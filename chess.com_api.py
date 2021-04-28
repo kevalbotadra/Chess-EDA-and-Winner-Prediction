@@ -19,7 +19,7 @@ def get_player_ratings(username):
         except:
             print("No Best Value Available")
 
-get_player_ratings("ayushpatel802")
+get_player_ratings("<insert player name>")
 
 
 
